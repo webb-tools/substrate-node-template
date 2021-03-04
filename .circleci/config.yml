@@ -1,13 +1,11 @@
 version: 2.1
 jobs:
   build:
-    macos: # indicate that we are using the macOS executor
-      xcode: 11.3.0
-    # docker:
-    #   - image: cimg/rust:1.50
-    #     environment:
-    #       DEBUG_BUILD: true
-    #       DEBIAN_FRONTEND: noninteractive
+    docker:
+      - image: cimg/rust:1.50
+        environment:
+          DEBUG_BUILD: true
+          DEBIAN_FRONTEND: noninteractive
 
     working_directory: ~/substrate-node-template
 

@@ -1,1 +1,1 @@
-cargo build --release
+cargo check --release
