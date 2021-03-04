@@ -11,5 +11,5 @@ jobs:
 
     steps:
       - checkout
-      - run: ~/anon/scripts/init.sh
+      - run: ~/substrate-node-template/scripts/init.sh
       - run: source ~/.cargo/env && ~/substrate-node-template/scripts/build.sh
