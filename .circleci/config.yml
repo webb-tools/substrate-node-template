@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/rust:1.50
+        environment:
+          DEBUG_BUILD: true
+          DEBIAN_FRONTEND: noninteractive
+
+    working_directory: ~/substrate-node-template
+
+    steps:
+      - checkout
+      - run: source ~/.cargo/env && ~/substrate-node-template/scripts/build.sh
